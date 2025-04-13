@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>JavaScript Lab Assignment</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 30px;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+    #output, #formOutput {
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    img {
+      width: 200px;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>JavaScript Lab Assignment — DOM Section</h1>
+
+  <!-- Registration Form -->
+  <h2>Registration Form</h2>
+  <form id="registrationForm" onsubmit="return validateForm()">
+    <label>Name: <input type="text" id="name" /></label>
+    <label>Username: <input type="text" id="username" /></label>
+    <label>Password: <input type="password" id="password" /></label>
+    <label>Confirm Password: <input type="password" id="confirmPassword" /></label>
+    <label>Year of Birth: <input type="text" id="year" /></label>
+    <label>Email: <input type="text" id="email" /></label>
+    <label><input type="checkbox" id="terms" /> I agree to the Terms and Conditions</label>
+    <button type="submit">Submit</button>
+  </form>
+
+  <!--User Info Form -->
+  <h2>Tell Us About You</h2>
+  <form onsubmit="handleSubmit(); return false;">
+    <label>Name: <input type="text" id="formName" /></label>
+    <label>Age: <input type="number" id="formAge" /></label>
+    <label>Hometown: <input type="text" id="formHometown" /></label>
+    <button type="submit">Submit</button>
+  </form>
+  <div id="formOutput"></div>
+
+  <!--Alerts -->
+  <h2>Alert Examples</h2>
+  <button onclick="alert('Welcome')">Click for Welcome</button>
+  <br /><br />
+  <a href="#" onmouseover="alert('Welcome')">Hover for a welcome message</a>
+
+  <!-- Rollover Image -->
+  <h2>Image Rollover</h2>
+  <img
+    id="rollImg"
+    src="image1.jpg"
+    onmouseover="this.src='image2.jpg'"
+    onmouseout="this.src='image1.jpg'"
+    alt="Rollover"
+  />
+
+  <div id="output"></div>
+
+  <script src="index.js"></script>
+</body>
+</html>
